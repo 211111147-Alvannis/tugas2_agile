@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <title>Buka dan Tutup</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+        }
+
+        .container {
+            width: 360px;
+            height: auto;
+            background-color: black;
+        }
+
+        input {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 8px 0;
+            width: 200px;
+            height: 25px;
+
+            border: none;
+            border-bottom: 1px solid;
+            border-radius: 20px;
+            text-align: center;
+            background-color: gray;
+        }
+
+        .search {
+            color: black;
+            -webkit-text-fill-color: black;
+        }
+
+        .logo_lonceng {
+            width: 23px;
+            height: 23px;
+            margin-left: 40px;
+        }
+
+        .logo_hamburger {
+            width: 33px;
+            height: 33px;
+        }
+
+        table {
+            margin-left: 20px;
+        }
+
+        .gym {
+            width: 330px;
+            height: 180px;
+
+            border-radius: 13px;
+        }
+
+        .logo1 {
+            width: 23px;
+            height: 23px;
+        }
+        h6{
+            color: white;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        p {
+            color: white;
+            font-size: 11px;
+            margin-left: 5px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .genre {
+            font-size: 13px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: -16px;
+        }
+        .judul{
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input class="search" type="text" placeholder="Search" id="keyword" name="search">
+        <a href="">
+            <img class="logo_lonceng" src="gambar/logo_lonceng.png" alt="lonceng">
+        </a>
+        <a href="Halaman_Utama.html">
+            <img class="logo_hamburger" src="gambar/hamburger.png" alt="lonceng">
+        </a>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" value="title" id="filter_title" checked>
+            <label class="form-check-label" for="filter_title">
+                Hari
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" value="genre" id="filter_genre" checked>
+            <label class="form-check-label" for="filter_title">
+                Waktu
+            </label>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <img class="logo1" src="gambar/logo3.png" alt="">
+                    </td>
+                    <td>
+                        <p class="judul">Buka dan Tutup</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="book">
+            <div><img class="gym" src="gambar/gym1.jpeg" alt=""></div>
+            <h6 class="card-title title">Senin - Selasa</h6>
+            <p class="card-title genre">
+                12.00 - 21.00
+            </p>
+        </div>
+        <br><br>
+        
+        <div class="book">
+            <div><img class="gym" src="gambar/gym2.jfif" alt=""></div>
+            <h6 class="card-title title">Rabu - Kamis</h6>
+            <p class="card-title genre">
+                09.00 - 17.00
+            </p>
+        </div>
+        <br><br>
+
+        <div class="book">
+            <div><img class="gym" src="gambar/gym3.jfif" alt=""></div>
+            <h6 class="card-title title">Sabtu - Minggu</h6>
+            <p class="card-title genre">
+                09.00 - 21.00
+            </p>
+        </div>
+    </div>
+
+    <script>
+        class Search {
+            constructor(data) {
+                this.data = data;
+            }
+            equal(text, keyword) {
+                return text.toLowerCase().indexOf(keyword.toLowerCase()) == -1;
+            }
+            byTitle(keyword) {
+                for (let i = 0; i < this.data.length; i++) {
+                    const book = this.data[i];
+                    let title = book.querySelector(".title").innerText;
+                    if (this.equal(title, keyword))
+                        this.data[i].style.display = "none";
+                    else
+                        this.data[i].style.display = "";
+                }
+            }
+            byGenre(keyword) {
+                for (let i = 0; i < this.data.length; i++) {
+                    const book = this.data[i];
+                    let title = book.querySelector(".genre").innerText;
+                    if (this.equal(title, keyword))
+                        this.data[i].style.display = "none";
+                    else
+                        this.data[i].style.display = "";
+                }
+            }
+        }
+
+        let keyword = document.querySelector("#keyword");
+
+        const search = () => {
+            let books = document.querySelectorAll(".book");
+            let search = new Search(books);
+            let title = document.getElementById("filter_title")
+            let Fauthor = document.getElementById("filter_genre")
+            if (title.checked) {
+                search.byTitle(keyword.value)
+            }
+            else if (Fauthor.checked) {
+                search.byGenre(keyword.value)
+            }
+        }
+        keyword.addEventListener("keyup", search);
+        Fyear.addEventListener("keyup", search);
+    </script>
+</body>
+
+</html>

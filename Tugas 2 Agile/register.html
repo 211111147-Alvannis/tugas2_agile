@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+        }
+
+        h2 {
+            color: white;
+            font-size: 17px;
+            font-family: 'Days One', sans-serif;
+        }
+        .img_logo_gym{
+            width: 150px;
+            height: 120px;
+        }
+
+        .daftar {
+            margin: 50px;
+            font-size: 12px;
+        }
+
+        input {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 8px 0;
+            width: 340px;
+            height: 25px;
+
+            border: none;
+            border-bottom: 1px solid;
+            border-radius: 20px;
+            text-align: center;
+            background-color: gray;
+
+        }
+
+        #email {
+            -webkit-text-fill-color: black;
+        }
+        .text{
+            -webkit-text-fill-color: black;
+        }
+        .pass {
+            -webkit-text-fill-color: black;
+        }
+
+        .submit {
+            width: 340px;
+            height: 35px;
+
+            border: 1px solid;
+            border-radius: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            background-color: rgb(230, 34, 34);
+            color: white;
+        }
+
+
+        .submit1 {
+            text-align: left;
+            width: 380px;
+            height: 40px;
+            border: 1px solid;
+            border-radius: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(36, 36, 255);
+            color: white;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        .logo{
+            margin-left: 10px;
+        }
+
+
+        .submit2 {
+            width: 380px;
+            height: 40px;
+            border: 1px solid;
+            border-radius: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
+            color: black;
+        }
+        span{
+            margin-left: 50px;
+        }
+        .Teks_tengah{
+            margin-left: 57px;
+        }
+
+        .pass:invalid {
+            background-color: red;
+        }
+
+        .policy {
+            margin: 20px -160px;
+            block-size: auto;
+        }
+        p {
+            color: white;
+            font-size: 11px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(53, 53, 245);
+        }
+        label{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Selamat datang di
+        <br> GYM Log Workout Tracker
+    </h2>
+    <div class="daftar">
+        <img src="gambar/logo_gym.png" alt="" class="img_logo_gym">
+        <form action="#" method="post">
+            <div>
+                <label for="name">Nama</label><br>
+                <input type="text" id="name" class="text" placeholder="Masukkan Nama">
+                <br>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Masukkan Email">
+                <br>
+                <label for="password">Password</label><br>
+                <input type="password" name="pass" class="pass" placeholder="Masukkan Password" minlength="6">
+                <br>
+                <label for="password">Konfirmasi Password</label><br>
+                <input type="password" name="pass" class="pass" placeholder="Masukkan Password" minlength="6">
+            </div>
+        </form><br><br>
+        <a href="login.html">
+            <button class="submit">Buat Akun</button> 
+        </a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <title>Jadwal</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+        }
+
+        .container {
+            width: 360px;
+            height: auto;
+            background-color: black;
+        }
+
+        input {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 8px 0;
+            width: 200px;
+            height: 25px;
+
+            border: none;
+            border-bottom: 1px solid;
+            border-radius: 20px;
+            text-align: center;
+            background-color: gray;
+        }
+
+        .search {
+            color: black;
+            -webkit-text-fill-color: black;
+        }
+
+        .logo_lonceng {
+            width: 23px;
+            height: 23px;
+            margin-left: 40px;
+        }
+
+        .logo_hamburger {
+            width: 33px;
+            height: 33px;
+        }
+
+        table {
+            margin-left: 20px;
+        }
+
+        .gym {
+            width: 330px;
+            height: 180px;
+
+            border-radius: 13px;
+        }
+
+        .logo1 {
+            width: 23px;
+            height: 23px;
+        }
+
+        p {
+            color: white;
+            font-size: 11px;
+            margin-left: 5px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .judul{
+            font-weight: bold;
+        }
+
+        h6 {
+            font-size: 13px;
+            font-weight: bold;
+            text-align: left;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input class="search" type="text" placeholder="Search" id="keyword" name="search">
+        <a href="">
+            <img class="logo_lonceng" src="gambar/logo_lonceng.png" alt="lonceng">
+        </a>
+        <a href="Halaman_Utama.html">
+            <img class="logo_hamburger" src="gambar/hamburger.png" alt="lonceng">
+        </a>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" value="title" id="filter_title" checked>
+            <label class="form-check-label" for="filter_title">
+                Title
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filter" value="genre" id="filter_genre" checked>
+            <label class="form-check-label" for="filter_title">
+                Description
+            </label>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <img class="logo1" src="gambar/logo1.png" alt="">
+                    </td>
+                    <td>
+                        <p class="judul">Jadwal</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div><img class="gym" src="gambar/gym1.jpeg" alt=""></div>
+        <div class="book">
+            <h6 class="card-title title">Minggu Pertama</h6>
+            <p class="card-title genre">Fokus latihan pada minggu pertama adalah
+                latihan untuk seluruh tubuh. Artinya, Anda
+                akan melatih bagian-bagian tubuh utama.
+                Pada minggu pertama, disarankan Anda
+                hanya fitness 3 hari saja. Sangat penting
+                untuk memberikan tubuh Anda waktu untuk
+                pulih dari lelahnya latihan.
+                <br><br>
+                Agenda fitness untuk pemula tahap awal ini
+                bisa disederhanakan menjadi Senin, Rabu,
+                Jumat atau Selasa, Kamis, Sabtu. Hari
+                lainnya menjadi waktu istirahat.
+                <br><br>
+                Pada minggu pertama, Anda dapat
+                melakukan gerakan-gerakan dasar, yang
+                menjadi pondasi gerakan Anda di kemudian
+                hari. Anda pun tidak disarankan untuk
+                menggunakan beban yang berlebihan.
+                <br><br>
+                Karena, fokus utama pada minggu pertama
+                adalah untuk pembentukan kekuatan dan
+                otot untuk jangka panjang.
+            </p>
+        </div><br>
+        <div class="book">
+            <h6 class="card-title title">Minggu Kedua</h6>
+            <p class="card-title genre">Memasuki minggu kedua, jadwal fitness mulai
+                bertambah, tetapi tidak banyak. Hanya
+                bertambah satu hari saja, sehingga total
+                4 kali latihan dalam seminggu.
+                <br><br>
+                Jadwal pada minggu kedua contohnya adalah
+                latihan bagian tubuh atas pada Senin dan
+                Kamis, serta latihan bagian tubuh bawah untuk
+                hari Selasa dan Jumat. Hari yang tidak disebutkan
+                menjadi waktu untuk memulihkan tenaga.
+            </p>
+        </div><br>
+        <div class="book">
+            <h6 class="card-title title">Minggu Ketiga</h6>
+            <p class="card-title genre">Memasuki minggu ketiga, Anda semakin siap untuk meninggalkan cara latihan fitness untuk pemula.
+                <br><br>
+                Sebab, Anda dianggap sudah memiliki pengalaman yang cukup untuk menambah intensitas latihan. Di minggu
+                ketiga, Anda akan mendatangi pusat kebugaran sebanyak 6 kali.
+                <br><br>
+                Pembagian menu latihannya adalah hari pertama dan keempat menjadi latihan mendorong untuk otot bagian
+                atas seperti trisep, dada, dan bahu.
+                <br><br>
+                Di hari kedua dan kelima, latihan difokuskan pada bagian perut, punggung, dan bisep. Hari ketiga dan
+                keenam menjadi waktu untuk fokus pada pengembangan otot bagian bawah, seperti paha, betis, dan panggul.
+            </p>
+        </div><br>
+        <div class="book">
+            <h6 class="card-title title">Minggu Keempat</h6>
+            <p class="card-title genre">
+                Apakah jadwal fitness di minggu terakhir program ini semakin ketat? Tidak juga. Tetap 6 hari, hanya saja
+                intensitas latihannya yang ditambah.
+                <br><br>
+                Jenis latihan pada minggu keempat inilah yang dipermanenkan seterusnya guna menjaga kondisi Anda tetap
+                bugar dan kekuatan tidak menurun.
+                <br><br>
+                Penambahan intensitas latihan bisa dengan menambah jumlah set. Biasanya, latihan akan dilakukan dengan
+                jumlah set genap, seperti 8 atau 12 set.
+                <br><br>
+                Kalau pun tidak mau menambah set, Anda bisa menambah repetisinya. Selain itu, beban juga bisa
+                ditambahkan agar intensitas latihan juga semakin bertambah.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        class Search {
+            constructor(data) {
+                this.data = data;
+            }
+            equal(text, keyword) {
+                return text.toLowerCase().indexOf(keyword.toLowerCase()) == -1;
+            }
+            byTitle(keyword) {
+                for (let i = 0; i < this.data.length; i++) {
+                    const book = this.data[i];
+                    let title = book.querySelector(".title").innerText;
+                    if (this.equal(title, keyword))
+                        this.data[i].style.display = "none";
+                    else
+                        this.data[i].style.display = "";
+                }
+            }
+            byGenre(keyword) {
+                for (let i = 0; i < this.data.length; i++) {
+                    const book = this.data[i];
+                    let title = book.querySelector(".genre").innerText;
+                    if (this.equal(title, keyword))
+                        this.data[i].style.display = "none";
+                    else
+                        this.data[i].style.display = "";
+                }
+            }
+        }
+
+        let keyword = document.querySelector("#keyword");
+
+        const search = () => {
+            let books = document.querySelectorAll(".book");
+            let search = new Search(books);
+            let title = document.getElementById("filter_title")
+            let Fauthor = document.getElementById("filter_genre")
+            if (title.checked) {
+                search.byTitle(keyword.value)
+            }
+            else if (Fauthor.checked) {
+                search.byGenre(keyword.value)
+            }
+        }
+        keyword.addEventListener("keyup", search);
+        Fyear.addEventListener("keyup", search);
+    </script>
+</body>
+
+</html>
